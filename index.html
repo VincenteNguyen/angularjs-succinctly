@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter1-Introduction</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>    
+    <script src="app.js"></script>
+</head>
+
+<!-- <body ng-app>
+    <p>This is your first angular expression: {{ 1 + 2 }}</p>
+    Enter your name: <input type="text" ng-model="name"></input>
+    <p>{{name}}</p>
+
+    <div ng-controller="myCtrl">
+        <input type="button" value="Click me" ng-click="clickMe()"></input>
+        <p ng-show="visible">Display me</p>
+    </div>
+</body> -->
+
+<body ng-app="MyApp">
+    <!-- <div ng-controller="MyCtrl">
+        <label>Primitive</label>
+        <input type="text" ng-model="name">
+        <label>Object</label>
+        <input type="text" ng-model="user.name">
+        <div class="nested" ng-controller="MyNestedCtrl">
+            <label>Primitive</label>
+            <input type="text" ng-model="name">
+            <label>Primitive with explicit $parent reference</label>
+            <input type="text" ng-model="$parent.name">
+            <label>Object</label>
+            <input type="text" ng-model="user.name">
+        </div>
+    </div> -->
+    <!-- <div my-widget>
+        <p>Hello World!</p>
+    </div> -->
+    <my-widget>
+            <p>Hello World!</p>
+    </my-widget>
+    <label for=""><input type="checkbox" ng-model="checked" /> Toogle Button</label>
+    <!-- <button ng-disabled="checked">Press Me</button> -->
+    <input type="button" value="Press Me" ng-disabled="!checked">
+
+    <div ng-controller="MyCtrl">
+        <ul ng-repeat="user in users">
+            <li>{{user}}</li>
+        </ul>
+        <div class="nested" ng-controller="MyNestedCtrl">
+            First User: {{first}}
+        </div>
+    </div>
+    <basket apple orange>Roll over me and check the console!</basket>
+
+    <input type="text" ng-model="text" placeholder="Enter text"/>
+    <p>Input: {{ text }}</p>
+    <p>Filtered input: {{ text | reverse2 :{ suffix: "!"} }}</p>
+   
+    <ul ng-init="names = ['Vu', 'Quan', 'Tien']">
+        <li ng-repeat="name in names | exclude:'Quan' | sortAscending"><span>{{name}}</span></li>
+    </ul>
+</body>
+
+
+</html>
